@@ -1,19 +1,37 @@
-@extends('adminlte::page')
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Receitas</title>
 
-@section('title', 'Sistema de Receitas')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition login-page">
 
-@section('content_header')
-    <h1>Sistema de Receitas</h1>
-@stop
-
-@section('content')
+<div class="login-box" style="width: 500px;">
     <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Dashboard</h3>
-        </div>
+        <div class="card-body login-card-body text-center">
 
-        <div class="card-body">
-            Bem-vindo ao Sistema de Receitas!
+            <h2>🍴 Sistema de Receitas</h2>
+
+            <p class="mt-3">
+                Compartilhe suas receitas favoritas e descubra novos pratos.
+            </p>
+
+            <div class="mt-4">
+                <a href="{{ route('login') }}" class="btn btn-primary btn-block">
+                    Entrar
+                </a>
+
+                <a href="{{ route('register') }}" class="btn btn-success btn-block mt-2">
+                    Cadastrar-se
+                </a>
+            </div>
+
         </div>
     </div>
-@stop
+</div>
+
+</body>
+</html>

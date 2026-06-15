@@ -19,6 +19,8 @@
              <h1>Cadastre sua receita</h1>
             <label>Nome da receita</label>
             <input type="text" name="nome" placeholder="Digite o nome da receita...">
+            <label>Descrição da receita</label>
+            <input type="text" name="descricao" placeholder="Digite a descrição da receita...">
 
             <label>Ingredientes</label>
             <input type="text" name="ingredientes" placeholder="Digite os ingredientes utilizados...">

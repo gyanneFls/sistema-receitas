@@ -9,6 +9,7 @@ class Receita extends Model
     protected $fillable = [
         'nome',
         'ingredientes',
+        'descricao',
         'modo_preparo',
         'tempo_preparo',
         'imagem',

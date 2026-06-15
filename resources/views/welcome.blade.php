@@ -36,6 +36,7 @@
         .logo{
             font-size:3rem;
             margin-bottom:10px;
+            width: 150px;
         }
 
         .titulo{
@@ -82,7 +83,7 @@
 
     <div class="welcome-card">
 
-        <div class="logo">🍴</div>
+        <img src="{{ asset('vendor/adminlte/dist/img/ursologo.png') }}" class="logo">
 
         <div class="titulo">
             Sistema de Receitas

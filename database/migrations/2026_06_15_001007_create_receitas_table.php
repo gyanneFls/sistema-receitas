@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('ingredientes');
             $table->text('descricao');
             $table->longText('modo_preparo');
-            $table->string('imagem');
+            $table->string('imagem')->nullnable();
             $table->foreignId('categoria_id')
              ->constrained()
              ->cascadeOnDelete();

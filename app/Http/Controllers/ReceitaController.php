@@ -26,7 +26,6 @@ class ReceitaController extends Controller
         $dadosDaReceita = $request->all();
         Receita::create($dadosDaReceita);
 
-        return response()
-            ->redirectToRoute('receita.index');
+        return redirect()->route('receitas.index');
     }
 }

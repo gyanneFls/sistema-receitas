@@ -18,7 +18,7 @@ class ReceitaController extends Controller
     }
     public function create(){
         $categorias = Categorias::all();
-        return view('receitas.create');
+        return view('receitas.create', compact('categorias'));
     }
 
 

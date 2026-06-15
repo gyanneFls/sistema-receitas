@@ -9,7 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Insire sua receita!!!</h3>
+            <h3 class="card-title">Conheça novas receitas e descubra sabores!</h3>
         </div>
 
         <div class="card-body">

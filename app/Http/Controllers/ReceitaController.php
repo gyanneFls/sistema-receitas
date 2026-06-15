@@ -12,10 +12,12 @@ class ReceitaController extends Controller
     public function index(){
 
         $receitas = Receita::all();
+        
         return view('receitas.index', compact('receitas'));
 
     }
     public function create(){
+        $categorias = Categorias::all();
         return view('receitas.create');
     }
 

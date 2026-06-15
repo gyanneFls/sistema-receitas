@@ -24,7 +24,7 @@
             <input type="text" name="ingredientes" placeholder="Digite os ingredientes utilizados...">
 
             <label>Modo de preparo</label>
-            <input type="longtext" id="modo_preparo" name="cor">
+           <textarea id="modo_preparo" name="modo_preparo" placeholder="Digite o modo de preparo..."></textarea>
 
             <label for="categoria_id">Categoria:</label>
             <select name="categoria_id" id="categoria_id" required>
@@ -38,7 +38,7 @@
             <input type="file" name="imagem" id="imagem" accept="image/*" required>
 
             <button type="submit">Cadastrar</button>
-            <a href="{{ route('receita.index') }}" class="btn btn-secondary"> ← Voltar para lista </a>
+            <a href="{{ route('receitas.index') }}" class="btn btn-secondary"> ← Voltar para lista </a>
 
         </form>
 

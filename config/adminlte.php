@@ -318,7 +318,7 @@ return [
 
     [
         'text' => 'Cadastrar Receita',
-        'url' => 'receitas/create',
+        'url' => 'receitas.create',
         'icon' => 'fas fa-plus-circle',
     ],
 

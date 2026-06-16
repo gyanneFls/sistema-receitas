@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Categorias;
 
 class Receita extends Model
 {
@@ -16,4 +17,8 @@ class Receita extends Model
         'categoria_id',
         
     ];
+    public function categoria(){
+        return $this->belongsTo(Categorias::class, 'categoria_id');
+    }
 }
+

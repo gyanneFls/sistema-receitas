@@ -24,6 +24,10 @@ class ReceitaController extends Controller
 
      public function store(Request $request){
         $dadosDaReceita = $request->all();
+            if ($request->hasFile('imagem')) {
+                $dadosDaReceita['imagem'] = $request->file('imagem')
+                    ->store('receitas', 'public');
+    }
         Receita::create($dadosDaReceita);
 
         return redirect()->route('receitas.index');

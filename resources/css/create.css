@@ -1,0 +1,141 @@
+/* Página de Cadastro de Receitas */
+
+.content-wrapper {
+    background: linear-gradient(to right, #ffcfb3, #ffa065);
+}
+/* #fff8f0 */
+
+.logo {
+    position: absolute;
+    top: 80px;
+    left: 155px;
+
+    width: 100px;
+    height: auto;
+}
+
+.box {
+    background: #fff;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+}
+
+.box h1 {
+    text-align: center;
+    color: #e85d04;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.box form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.box label {
+    display: block;
+    font-weight: 600;
+    color: #972b00;
+    margin-bottom: 8px;
+}
+
+.box input[type="text"],
+.box select,
+.box textarea,
+.box input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.box input[type="text"]:focus,
+.box select:focus,
+.box textarea:focus {
+    border-color: #ff6b35;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255,107,53,.3);
+}
+
+.box textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Campos grandes ocupam toda a linha */
+.box textarea,
+.box input[type="file"] {
+    grid-column: span 2;
+}
+
+/* Botão cadastrar */
+.box button[type="submit"] {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.box button[type="submit"]:hover {
+    background: #e85d04;
+}
+
+/* Botão voltar */
+.box .btn-secondary {
+    background: #6c757d;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white !important;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.box .btn-secondary:hover {
+    background: #545b62;
+}
+
+/* Área dos botões */
+.box button,
+.box .btn-secondary {
+    margin-top: 10px;
+}
+
+/* Card superior */
+.card-header {
+    background: #ff6b35;
+    color: white;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+    .box form {
+        grid-template-columns: 1fr;
+    }
+
+    .box textarea,
+    .box input[type="file"] {
+        grid-column: span 1;
+    }
+
+    .box {
+        margin: 15px;
+        padding: 20px;
+    }
+}

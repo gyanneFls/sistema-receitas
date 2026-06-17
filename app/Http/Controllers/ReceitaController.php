@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Receita;
 use App\Models\Categorias;
+use Illuminate\Support\Facades\Storage;
 
 
 class ReceitaController extends Controller
@@ -55,4 +56,18 @@ class ReceitaController extends Controller
             ->route('receitas.index')
             ->with('success', 'Receita atualizada com sucesso!');
     }
+    public function destroy(Receita $receita)
+{
+    // Apaga a imagem do storage
+    if ($receita->imagem && Storage::disk('public')->exists($receita->imagem)) {
+        Storage::disk('public')->delete($receita->imagem);
+    }
+
+    // Apaga a receita
+    $receita->delete();
+
+    return redirect()
+        ->route('receitas.index')
+        ->with('success', 'Receita excluída com sucesso!');
+}
 }

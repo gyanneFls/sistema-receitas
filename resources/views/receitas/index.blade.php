@@ -33,11 +33,15 @@
                             Ler mais
                         </button>
                         <a href="{{ route('receitas.edit', $receita->id) }}" class="btn btn-sm btn-outline-secondary">Editar</a>
-                        <form action="{{ route('receitas.destroy', $receita->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Excluir esta receita?')">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-outline-danger">Excluir</button>
-                        </form>
+                        <form action="{{ route('receitas.destroy', $receita->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Tem certeza que deseja excluir esta receita?')">
+
+                             @csrf
+                              @method('DELETE')
+
+                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                   Excluir
+                                  </button>
+                                </form>
                     </div>
                 </div>
             </div>

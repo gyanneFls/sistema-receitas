@@ -92,7 +92,8 @@
         <p class="descricao">
             Compartilhe suas receitas favoritas, descubra novos pratos e inspire outros cozinheiros.
         </p>
-
+       
+        
         <div class="botoes">
             <a href="{{ route('login') }}" class="btn btn-login btn-lg btn-block text-white">
                 Entrar

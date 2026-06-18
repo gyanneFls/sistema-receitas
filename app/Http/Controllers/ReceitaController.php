@@ -12,7 +12,7 @@ class ReceitaController extends Controller
 {
     public function index(){
 
-        $receitas = Receita::all();
+       $receitas = Receita::with('categoria')->paginate(9);
         
         return view('receitas.index', compact('receitas'));
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ __('Cadastro') }} — ReceitasFáceis</title>
+    <title>{{ __('Cadastro') }} kiDelicias</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
@@ -19,7 +19,7 @@
 
     <div class="hero-panel">
         <div class="hero-logo">
-            Receitas<span>Fáceis</span>
+            kidelícias<span>Receitas</span>
         </div>
 
         <div>

@@ -1,0 +1,120 @@
+ .content-wrapper {
+        background: linear-gradient(to right, #ffcfb3, #ffa065);
+    }
+ 
+    .box {
+        background: #fff;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    }
+ 
+    .box h1 {
+        color: #e85d04;
+        font-weight: bold;
+    }
+ 
+    /* Botão Nova Receita */
+    .btn-cadastrar {
+        background: #ff6b35;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s;
+    }
+    .btn-cadastrar:hover {
+        background: #e85d04;
+        color: white;
+    }
+ 
+    /* Tabela */
+    .recipe-table thead th {
+        color: #972b00;
+        font-weight: 600;
+        border-bottom: 2px solid #ffd6b8;
+        padding: 12px;
+    }
+ 
+    .recipe-table td {
+        padding: 12px;
+        vertical-align: middle;
+        border-bottom: 1px solid #f1e4da;
+    }
+ 
+    .recipe-table tbody tr:hover {
+        background-color: #fff8f0;
+    }
+ 
+    /* Thumbnail */
+    .recipe-thumb {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .recipe-thumb-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff0e6;
+        color: #ff6b35;
+        font-size: 1.2rem;
+    }
+ 
+    /* Badge categoria */
+    .badge-category {
+        background: #ffe5d0;
+        color: #972b00;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: .8rem;
+    }
+ 
+    /* Botões de ação */
+    .btn-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        background: #fff;
+        color: #6c757d;
+        margin: 0 2px;
+        transition: 0.3s;
+    }
+ 
+    .btn-action-view:hover   { background: #fff0e6; color: #ff6b35; border-color: #ff6b35; }
+    .btn-action-edit:hover   { background: #fff8f0; color: #e85d04; border-color: #e85d04; }
+    .btn-action-delete:hover { background: #fdecec; color: #d62828; border-color: #d62828; }
+ 
+    /* Modal header laranja */
+    .card-header {
+        background: #ff6b35;
+        color: white;
+        border-radius: 15px 15px 0 0;
+        padding: 15px 20px;
+    }
+    .card-title { font-weight: bold; }
+ 
+    .modal-content {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+    }
+ 
+    @media (max-width: 768px) {
+        .box {
+            margin: 15px;
+            padding: 20px;
+        }
+    }
+

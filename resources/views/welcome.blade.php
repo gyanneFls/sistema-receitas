@@ -84,19 +84,21 @@
     <div class="welcome-card">
 
         <img src="{{ asset('vendor/adminlte/dist/img/ursologo.png') }}" class="logo">
+        
 
         <div class="titulo">
-            Sistema de Receitas
+            Kidelicia-Receitas
         </div>
 
         <p class="descricao">
+            
             Compartilhe suas receitas favoritas, descubra novos pratos e inspire outros cozinheiros.
         </p>
        
         
         <div class="botoes">
             <a href="{{ route('login') }}" class="btn btn-login btn-lg btn-block text-white">
-                Entrar
+                entrar
             </a>
 
             <a href="{{ route('register') }}" class="btn btn-success btn-lg btn-block mt-3">

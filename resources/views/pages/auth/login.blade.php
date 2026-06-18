@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ __('Entrar') }} — ReceitasFáceis</title>
+    <title>{{ __('Entrar') }} KiDelicias</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
 
 <div class="login-wrapper">
 
-    {{-- ── Painel esquerdo — hero visual ──────────────────────── --}}
+  
     <div class="hero-panel">
-        <div class="hero-logo">Receitas<span>Fáceis</span></div>
+        <div class="hero-logo">KiDelicia<span>Receitas</span></div>
 
         <div>
             <p class="hero-quote">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    {{-- ── Painel direito — formulário ─────────────────────────── --}}
+    
     <div class="form-panel">
         <div class="form-card">
 
@@ -48,7 +48,7 @@
                 </div>
             @endif
 
-            {{-- Erros gerais de validação --}}
+            
             @if ($errors->any())
                 <div class="session-alert" style="background:#FEE9E9; border-color:#F5A0A0; color:#7A0000;">
                     <i class="bi bi-exclamation-circle-fill me-1"></i>

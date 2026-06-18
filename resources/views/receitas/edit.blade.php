@@ -13,9 +13,10 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Adicione sua receita favorita, ou crie uma!</h3>
+            <h3 class="card-title">Afim de fazer alguns ajustes?</h3>
         </div>
         <img src="{{ asset('vendor/adminlte/dist/img/ursologo.png') }}" class="logo">
+        <br>
         <div class="box">
         <form action="{{route('receitas.update', $receita->id)}}" method="POST" enctype="multipart/form-data">
             @csrf

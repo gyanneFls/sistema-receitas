@@ -1,13 +1,7 @@
 @extends('adminlte::page')
  
 @section('title', 'Kidelicia')
- 
-@section('content_header')
-<div class="header-receitas">
-    <h1>Sistema de Receitas</h1>
-</div>
-    
-@stop
+
 @section('css')
     @vite('resources/css/index.css')
 @stop
@@ -41,6 +35,7 @@
                         <td>
                             @if($receita->imagem)
                                 <img src="{{ asset('storage/' . $receita->imagem) }}" class="recipe-thumb">
+
                             @else
                                 <div class="recipe-thumb recipe-thumb-empty">
                                     <i class="fas fa-utensils"></i>
@@ -80,7 +75,8 @@
                                 </div>
                                 <div class="modal-body">
                                     @if($receita->imagem)
-                                        <img src="{{ asset('storage/' . $receita->imagem) }}" class="img-fluid mb-3 rounded">
+                                        <img src="{{ asset('storage/' . $receita->imagem) }}" class="receita-imagem img-fluid mb-3 rounded">
+                                        <br>
                                     @endif
                                     <span class="badge-category mb-3 d-inline-block">{{ $receita->categoria->nome }}</span>
                                     <p><strong>Descrição:</strong><br>{{ $receita->descricao }}</p>

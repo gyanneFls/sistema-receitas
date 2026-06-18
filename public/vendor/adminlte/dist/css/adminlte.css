@@ -12507,7 +12507,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .brand-link .brand-image {
   float: left;
-  line-height: .8;
+  
   margin-left: .8rem;
   margin-right: .5rem;
   margin-top: -3px;
@@ -12517,14 +12517,14 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .brand-link .brand-image-xs {
   float: left;
-  line-height: .8;
+  
   margin-top: -.1rem;
   max-height: 33px;
   width: auto;
 }
 
 .brand-link .brand-image-xl {
-  line-height: .8;
+  
   max-height: 40px;
   width: auto;
 }
@@ -44505,8 +44505,8 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   border-radius: 0.25rem;
 }
 
-.img-circle {
-  border-radius: 50%;
+.img-urso {
+  border-radius: none;
 }
 
 .img-size-64,

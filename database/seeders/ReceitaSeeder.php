@@ -51,7 +51,7 @@ class ReceitaSeeder extends Seeder
         ]);
 
         Receita::create([
-            'nome' => 'Sanduíche Natural de Frango',
+            'nome' => 'Hamburguer Caseiro',
             'descricao' => 'Lanche leve e nutritivo, preparado com frango desfiado, vegetais frescos e pão integral.',
             'ingredientes' => 'Pão integral, 200g de frango desfiado, alface, tomate, cenoura ralada, maionese light e sal a gosto.',
             'modo_preparo' => 'Misture o frango desfiado com a maionese light. Monte o sanduíche adicionando alface, tomate, cenoura e o recheio de frango entre as fatias de pão. Sirva fresco.',

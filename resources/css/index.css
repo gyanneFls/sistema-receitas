@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #fffcf8;
+    background: #fffbf7;
 }
 
 /* ===== CONTAINER ===== */
@@ -160,7 +160,7 @@ body {
 
 .card-header {
     background: #ff6b35;
-    color: white;
+    color: #fffbf7;
     border-radius: 15px 15px 0 0;
     padding: 15px 20px;
 }
@@ -252,4 +252,19 @@ body {
         height: 180px;
     }
 
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+} 
+.pagination .page-item {
+    margin: 0 5px;
+}
+.pagination .page-link {
+    color: #ff6b35;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }

@@ -97,7 +97,7 @@
         
         <div class="botoes">
             <a href="{{ route('login') }}" class="btn btn-login btn-lg btn-block text-white">
-                entrar
+                Entrar
             </a>
 
             <a href="{{ route('register') }}" class="btn btn-success btn-lg btn-block mt-3">

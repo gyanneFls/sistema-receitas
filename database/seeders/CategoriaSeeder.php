@@ -14,11 +14,9 @@ class CategoriaSeeder extends Seeder
         Categorias::create([
             'nome' => 'Doces'
         ]);
-
         Categorias::create([
             'nome' => 'pratos principais'
         ]);
-
         Categorias::create([
             'nome' => 'Bebidas'
         ]);
@@ -28,5 +26,13 @@ class CategoriaSeeder extends Seeder
         Categorias::create([
             'nome' => 'lanches'
         ]);
+        Categorias::create([
+            'nome' => 'sopas'
+        ]);
+        Categorias::create([
+            'nome' => 'saladas'
+        ]);
+        
+            
     }
 }

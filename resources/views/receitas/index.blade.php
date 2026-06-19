@@ -19,76 +19,114 @@
             <a href="{{ route('receitas.create') }}" class="btn-cadastrar">+ Nova Receita</a>
         </div>
  
-        <table class="table recipe-table">
-            <thead>
-                <tr>
-                    <th>Imagem</th>
-                    <th>Nome</th>
-                    <th>Categoria</th>
-                    <th>Descrição</th>
-                    <th class="text-center">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($receitas as $receita)
-                    <tr>
-                        <td>
-                            @if($receita->imagem)
-                                <img src="{{ asset('storage/' . $receita->imagem) }}" class="recipe-thumb">
+        <div class="row">
+        @foreach($receitas as $receita)
 
-                            @else
-                                <div class="recipe-thumb recipe-thumb-empty">
-                                    <i class="fas fa-utensils"></i>
-                                </div>
-                            @endif
-                        </td>
-                        <td><strong>{{ $receita->nome }}</strong></td>
-                        <td><span class="badge-category">{{ $receita->categoria->nome }}</span></td>
-                        <td class="text-muted">{{ Str::limit($receita->descricao, 60) }}</td>
-                        <td class="text-center">
-                            <button type="button" class="btn-action btn-action-view" data-toggle="modal" data-target="#modal{{ $receita->id }}" title="Ler mais">
+            <div class="col-md-4 mb-4">
+                <div class="recipe-card">
+
+                    @if($receita->imagem)
+                        <img src="{{ asset('storage/' . $receita->imagem) }}" class="recipe-img">
+                    @else
+                        <div class="recipe-img-empty">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    @endif
+
+                    <div class="recipe-content">
+
+                        <span class="badge-category">
+                            {{ $receita->categoria->nome }}
+                        </span>
+
+                        <h4>{{ $receita->nome }}</h4>
+
+                        <p>
+                            {{ Str::limit($receita->descricao, 80) }}
+                        </p>
+
+                        <div class="recipe-actions">
+
+                            <button type="button"
+                                class="btn-action btn-action-view"
+                                data-toggle="modal"
+                                data-target="#modal{{ $receita->id }}">
                                 <i class="fas fa-eye"></i>
                             </button>
-                            <a href="{{ route('receitas.edit', $receita->id) }}" class="btn-action btn-action-edit" title="Editar">
+
+                            <a href="{{ route('receitas.edit', $receita->id) }}"
+                            class="btn-action btn-action-edit">
                                 <i class="fas fa-pen"></i>
                             </a>
-                            <form action="{{ route('receitas.destroy', $receita->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Tem certeza que deseja excluir esta receita?')">
+
+                            <form action="{{ route('receitas.destroy', $receita->id) }}"
+                                method="POST"
+                                class="d-inline"
+                                onsubmit="return confirm('Deseja excluir esta receita?')">
+
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn-action btn-action-delete" title="Excluir">
+
+                                <button type="submit"
+                                    class="btn-action btn-action-delete">
                                     <i class="fas fa-trash"></i>
                                 </button>
+
                             </form>
-                        </td>
-                    </tr>
- 
 
-
-
-
-                     <div class="modal fade" id="modal{{ $receita->id }}" tabindex="-1">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <span class="card-title">{{ $receita->nome }}</span>
-                                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                    @if($receita->imagem)
-                                        <img src="{{ asset('storage/' . $receita->imagem) }}" class="receita-imagem img-fluid mb-3 rounded">
-                                        <br>
-                                    @endif
-                                    <span class="badge-category mb-3 d-inline-block">{{ $receita->categoria->nome }}</span>
-                                    <p><strong>Descrição:</strong><br>{{ $receita->descricao }}</p>
-                                    <p><strong>Ingredientes:</strong><br>{{ $receita->ingredientes }}</p>
-                                    <p><strong>Modo de Preparo:</strong><br>{{ $receita->modo_preparo }}</p>
-                                </div>
-                            </div>
                         </div>
+
                     </div>
-                @endforeach
-            </tbody>
-        </table>
+
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal{{ $receita->id }}" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="card-title">{{ $receita->nome }}</span>
+
+                            <button type="button"
+                                    class="close text-white"
+                                    data-dismiss="modal">
+                                &times;
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            @if($receita->imagem)
+                                <img src="{{ asset('storage/' . $receita->imagem) }}"
+                                    class="receita-imagem img-fluid mb-3 rounded">
+                            @endif
+
+                            <span class="badge-category">
+                                {{ $receita->categoria->nome }}
+                            </span>
+
+                            <hr>
+
+                            <p><strong>Descrição:</strong><br>{{ $receita->descricao }}</p>
+
+                            <p><strong>Ingredientes:</strong><br>{{ $receita->ingredientes }}</p>
+
+                            <p><strong>Modo de Preparo:</strong><br>{{ $receita->modo_preparo }}</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            @endforeach
+        </div>
+
+    <div class="mt-4">
+        {{ $receitas->links() }}
+    </div>
  
         {{ $receitas->links() }}
  

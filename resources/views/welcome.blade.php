@@ -91,7 +91,6 @@
         </div>
 
         <p class="descricao">
-            
             Compartilhe suas receitas favoritas, descubra novos pratos e inspire outros cozinheiros.
         </p>
        
@@ -105,14 +104,6 @@
                 Cadastrar-se
             </a>
         </div>
-    <!--
-        <div class="categorias">
-            <span class="categoria">🍰 Doces</span>
-            <span class="categoria">🥗 Fitness</span>
-            <span class="categoria">🍝 Massas</span>
-            <span class="categoria">🍔 Lanches</span>
-        </div>
-    -->
     </div>
 
 </body>

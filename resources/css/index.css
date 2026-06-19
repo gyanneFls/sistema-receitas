@@ -11,7 +11,7 @@ body {
 /* ===== CONTAINER ===== */
 
 .box {
-    background: #fff;
+    background: #ffffff;
     max-width: 1200px;
     margin: 30px auto;
     padding: 35px;
@@ -71,7 +71,7 @@ body {
 .recipe-img-empty {
     width: 100%;
     height: 220px;
-    background: #fff0e6;
+    background: #fff0da;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +203,7 @@ body {
 }
 
 .nav-header {
-    color: #ffe0cc !important;
+    color: #fdf4ea !important;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -235,7 +235,7 @@ body {
 /* ===== CONTEÚDO ===== */
 
 .content-wrapper {
-    background: #fff8f0 !important;
+    background: #ffffff !important;
 }
 
 /* ===== RESPONSIVO ===== */

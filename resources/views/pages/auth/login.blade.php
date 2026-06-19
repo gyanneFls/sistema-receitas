@@ -94,7 +94,7 @@
                             placeholder="{{ __('Sua senha') }}"
                         >
                         <button type="button" class="toggle-pwd" onclick="togglePwd()" aria-label="Mostrar/ocultar senha">
-                            <i class="bi bi-eye" id="pwd-icon"></i>
+                            
                         </button>
                     </div>
                     @error('password')
